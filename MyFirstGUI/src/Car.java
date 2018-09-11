@@ -32,6 +32,12 @@ public class Car {
 		this.yPosition = yPosition;
 	}
 
+	public int getWidth(Graphics g) {
+		return 120;
+	}
+	public int getHeight(Graphics g) {
+		return 80;
+	}
 	public void draw(Graphics g) {
 		
 		Graphics2D g2 = (Graphics2D) g;
@@ -41,12 +47,9 @@ public class Car {
 		Ellipse2D.Double rearTire = new Ellipse2D.Double(this.getxPosition()+20, this.getyPosition()+50, 20, 20);
 		Ellipse2D.Double frontTire = new Ellipse2D.Double(this.getxPosition()+70, this.getyPosition()+50, 20, 20);
 
-		Line2D.Double rearWindow = new Line2D.Double(this.getxPosition()+20, this.getyPosition()+20, 
-				this.getxPosition()+40, this.getyPosition()+0);
-		Line2D.Double frontWindow = new Line2D.Double(this.getxPosition()+60, this.getyPosition()+0, 
-				this.getxPosition()+80, this.getyPosition()+20);
-		Line2D.Double roof = new Line2D.Double(this.getxPosition()+40, this.getyPosition()+0, 
-				this.getxPosition()+60, this.getyPosition()+0);
+		Line2D.Double rearWindow = new Line2D.Double(this.getxPosition()+20, this.getyPosition()+20, this.getxPosition()+40, this.getyPosition()+0);
+		Line2D.Double frontWindow = new Line2D.Double(this.getxPosition()+60, this.getyPosition()+0, this.getxPosition()+80, this.getyPosition()+20);
+		Line2D.Double roof = new Line2D.Double(this.getxPosition()+40, this.getyPosition()+0, this.getxPosition()+60, this.getyPosition()+0);
 
 		g2.setColor(Color.BLUE);
 		g2.fill(body);
