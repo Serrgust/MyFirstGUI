@@ -40,7 +40,7 @@ public class CarStage extends JComponent {
 				theCar.setxPosition(theCar.getxPosition()-theCar.getSpeed());
 			}
 			else {
-				theCar.setDirection(1);
+				theCar.setDirection(-1);
 			}
 //		theCar2.draw(g);
 //		theCar3.draw(g);
