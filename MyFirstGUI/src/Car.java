@@ -9,11 +9,26 @@ public class Car {
 	
 	private int xPosition;
 	private int yPosition;
+	private int speed; //pixels per second
+	private int direction;
+	
+	private static final int DEFAULT_PIXELS_PER_TICK = 10;
+	private static final int DEFAULT_DIRECTION = 1;
 	
 	public Car(int xPosition, int yPosition) {
+		this(xPosition, yPosition, DEFAULT_PIXELS_PER_TICK, DEFAULT_DIRECTION);
+	}
+	
+	public Car(int xPosition, int yPosition, int speed) {
+		this(xPosition, yPosition, 5, DEFAULT_DIRECTION);
+	}
+	
+	public Car(int xPosition, int yPosition, int speed, int direction) {
 		super();
 		this.xPosition = xPosition;
 		this.yPosition = yPosition;
+		this.speed = speed;
+		this.direction = direction;
 	}
 
 	public int getxPosition() {
@@ -23,7 +38,11 @@ public class Car {
 	public int getyPosition() {
 		return yPosition;
 	}
-
+	
+	public int getSpeed() {
+		return speed;
+	}
+	
 	public void setxPosition(int xPosition) {
 		this.xPosition = xPosition;
 	}
@@ -31,7 +50,19 @@ public class Car {
 	public void setyPosition(int yPosition) {
 		this.yPosition = yPosition;
 	}
+	public void setSpeed (int speed ) {
+		this.speed = speed;
+		
+	}
 
+	public void setDirection(int direction) {
+		this.direction = direction;
+	}
+	
+	public int getDirection() {
+		return direction;
+	}
+	
 	public int getWidth(Graphics g) {
 		return 120;
 	}
