@@ -92,13 +92,14 @@ public class Car {
 		}
 
 		else {
-			rearWindow = new Line2D.Double(this.getxPosition()+20, this.getyPosition()+20, 
+			rearWindow = new Line2D.Double(20+this.getxPosition()+20, this.getyPosition()+20, 
 					20+this.getxPosition()+40, this.getyPosition()+0);
-			frontWindow = new Line2D.Double(this.getxPosition()+60, this.getyPosition()+0, 
+			frontWindow = new Line2D.Double(20+this.getxPosition()+60, this.getyPosition()+0, 
 					20+this.getxPosition()+80, this.getyPosition()+20);
-			roof = new Line2D.Double(this.getxPosition()+20, this.getyPosition()+0, 
+			roof = new Line2D.Double(20+this.getxPosition()+40, this.getyPosition()+0, 
 					20+this.getxPosition()+60, this.getyPosition()+0);
 		}
+		
 		
 		g2.setColor(Color.BLUE);
 		g2.fill(body);
